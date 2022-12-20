@@ -9,6 +9,10 @@ const paragraph = document.querySelector('.result > p');
 encriptarBtn.addEventListener('click', () => {
     let result = msgInput.value.trim();
 
+    if (result.length === 0) {
+        return;
+    }
+
     result = result.replace(/i/gi, 'imes');
     result = result.replace(/a/gi, 'ai');
     result = result.replace(/o/gi, 'ober');
@@ -19,6 +23,10 @@ encriptarBtn.addEventListener('click', () => {
 
 desencriptarBtn.addEventListener('click', () => {
     let result = msgInput.value.trim();
+
+    if (result.length === 0) {
+        return;
+    }
 
     result = result.replace(/enter/gi, 'e');
     result = result.replace(/imes/gi, 'i');
